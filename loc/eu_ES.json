@@ -1,0 +1,42 @@
+[
+	{
+		"id": "control_action_description",
+		"text": "Spotube music player kontrolatzeko ekintza"
+	},
+	{
+		"id": "play_pause_action_description",
+		"text": "Play-pause erakusten duen Spotube kontrol itema"
+	},
+	{
+		"id": "now_playing_action_description",
+		"text": "Uneko abestiaren informazioa erakusten duen Spotube kontrol itema"
+	},
+	{
+		"id": "item_action_description",
+		"text": "Spotube kontrol itema"
+	},
+	{
+		"id": "prop_port",
+		"text": "API-ak darabilen portua"
+	},
+	{
+		"id": "prop_action",
+		"text": "Item honek exekutatuko duen ekintza"
+	},
+	{
+		"id": "connect_error_title",
+		"text": "Ezin konektatu"
+	},
+	{
+		"id": "connect_error_body",
+		"text": "Ezin izan da Spotube-rekin konektatu. Ziurtatu Spotube martxan dagoela eta beste gailuetatik konektatzeko aukera aktibatuta dagoela: Settings->Gaitu konexioa"
+	},
+	{
+		"id": "paused",
+		"text": "etenda"
+	},
+	{
+		"id": "playing",
+		"text": "martxan"
+	}
+]

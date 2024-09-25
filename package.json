@@ -1,0 +1,23 @@
+{
+	"name": "action_spotube-contro",
+	"version": "1.2.3",
+	"description": "Control Spotube from ideckia",
+	"bin": "bin/index.js",
+	"readme": "README.md",
+	"maintainers": [],
+	"author": "Josu Igoa Errandonea",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ideckia/action_spotube-contro.git"
+	},
+	"dependencies": {
+		"ws": "^8.2.3"
+	},
+	"pkg": {
+		"assets": [
+			"bin/tray/*",
+			"bin/editor/*",
+			"bin/loc/*"
+		]
+	}
+}

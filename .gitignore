@@ -1,0 +1,4 @@
+bin/*
+gen.readme.md
+node_modules/*
+move.sh

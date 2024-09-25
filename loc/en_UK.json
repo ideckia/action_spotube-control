@@ -1,0 +1,42 @@
+[
+	{
+		"id": "control_action_description",
+		"text": "Action to control Spotube music player"
+	},
+	{
+		"id": "play_pause_action_description",
+		"text": "A Spotube control item that shows play-pause"
+	},
+	{
+		"id": "now_playing_action_description",
+		"text": "A Spotube control item that shows the 'now-playing' information"
+	},
+	{
+		"id": "item_action_description",
+		"text": "A Spotube control item"
+	},
+	{
+		"id": "prop_port",
+		"text": "Port used by the API"
+	},
+	{
+		"id": "prop_action",
+		"text": "Action to execute by this item"
+	},
+	{
+		"id": "connect_error_title",
+		"text": "Could not connect"
+	},
+	{
+		"id": "connect_error_body",
+		"text": "Impossible to connect to Spotube. Be sure Spotube is running and external devices connection is active: Settings->Enable connect"
+	},
+	{
+		"id": "paused",
+		"text": "paused"
+	},
+	{
+		"id": "playing",
+		"text": "playing"
+	}
+]
