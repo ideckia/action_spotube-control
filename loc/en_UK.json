@@ -32,6 +32,14 @@
 		"text": "Impossible to connect to Spotube. Be sure Spotube is running and external devices connection is active: Settings->Enable connect"
 	},
 	{
+		"id": "disconnected_title",
+		"text": "Disconnected from Spotube"
+	},
+	{
+		"id": "disconnected_body",
+		"text": "Spotube control connection got lost, if you close Spotube on purpose, ignore this message."
+	},
+	{
 		"id": "paused",
 		"text": "paused"
 	},

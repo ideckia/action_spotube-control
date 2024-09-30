@@ -124,6 +124,10 @@ class SpotubeControl extends IdeckiaAction {
 			trace('Connected to Spotube');
 			resolve(spotubePort);
 		});
+		ws.once('close', () -> {
+			trace('Disconnected from Spotube');
+			core.dialog.error(Loc.disconnected_title.tr(), Loc.disconnected_body.tr());
+		});
 	}
 
 	function lookForPort() {

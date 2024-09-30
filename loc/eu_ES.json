@@ -32,6 +32,14 @@
 		"text": "Ezin izan da Spotube-rekin konektatu. Ziurtatu Spotube martxan dagoela eta beste gailuetatik konektatzeko aukera aktibatuta dagoela: Settings->Gaitu konexioa"
 	},
 	{
+		"id": "disconnected_title",
+		"text": "Spotube deskonektatuta"
+	},
+	{
+		"id": "disconnected_body",
+		"text": "Spotube kontrolaren konexioa galdu da, Spotube nahita itxi baduzu, mezu hau ez kontutan hartu."
+	},
+	{
 		"id": "paused",
 		"text": "etenda"
 	},
