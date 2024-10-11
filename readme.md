@@ -17,16 +17,11 @@ The items icons are customizable. Just put the images in the `[ideckia_dir]/acti
 
 ## Properties
 
-| Name | Type | Description | Shared | Default | Possible values |
-| ----- |----- | ----- | ----- | ----- | ----- |
+No properties needed
 
 ## On single click
 
 Opens a basic control-panel with the album cover, play-pause, next, previous buttons
-
-## On long press
-
-TODO
 
 ## Localizations
 
