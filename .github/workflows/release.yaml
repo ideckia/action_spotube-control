@@ -41,6 +41,7 @@ jobs:
         mv bin/index.js ${{ env.MAIN_CMD_NAME }}
         mv readme.md ${{ env.MAIN_CMD_NAME }}
         mv loc ${{ env.MAIN_CMD_NAME }}
+        mv node_modules ${{ env.MAIN_CMD_NAME }}
         echo '{"repository": "http://github.com/${{ github.repository }}","filename": "${{ env.MAIN_CMD_NAME }}.zip","version": "${{ github.ref_name }}"}' > ${{ env.MAIN_CMD_NAME }}/.info
 
     - name: Create item directory to release
