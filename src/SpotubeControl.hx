@@ -100,10 +100,16 @@ class SpotubeControl extends IdeckiaAction {
 		return new ActionOutcome({directory: dynamicDir});
 	}
 
-	public function execute(currentState:ItemState):js.lib.Promise<ActionOutcome> {
+	public function execute(currentState:ItemState):js.lib.Promise<ActionOutcome>
+		return generateDirectory(false);
+
+	override function onLongPress(currentState:ItemState):js.lib.Promise<ActionOutcome>
+		return generateDirectory(true);
+
+	function generateDirectory(force:Bool):js.lib.Promise<ActionOutcome> {
 		return new js.lib.Promise((resolve, reject) -> {
 			var portFound = false;
-			lookForPort().then(_ -> {
+			lookForPort(force).then(_ -> {
 				portFound = true;
 				resolve(returnDirectory());
 			});
@@ -116,21 +122,25 @@ class SpotubeControl extends IdeckiaAction {
 	}
 
 	function connect(resolve:Dynamic) {
-		if (ws != null)
+		if (ws != null) {
+			ws.off('close', onConnectionClosed);
 			ws.terminate();
+		}
 
 		ws = new WebSocket('ws://0.0.0.0:${spotubePort}/ws');
 		ws.once('open', () -> {
-			trace('Connected to Spotube');
+			core.log.debug('Connected to Spotube');
 			resolve(spotubePort);
 		});
-		ws.once('close', () -> {
-			trace('Disconnected from Spotube');
-			core.dialog.error(Loc.disconnected_title.tr(), Loc.disconnected_body.tr());
-		});
+		ws.on('close', onConnectionClosed);
 	}
 
-	function lookForPort() {
+	function onConnectionClosed() {
+		core.log.debug('Disconnected from Spotube');
+		core.dialog.error(Loc.disconnected_title.tr(), Loc.disconnected_body.tr());
+	}
+
+	function lookForPort(force:Bool = false) {
 		return new js.lib.Promise((resolve, reject) -> {
 			function checkPort() {
 				for (i in 5001...22500)
@@ -144,7 +154,7 @@ class SpotubeControl extends IdeckiaAction {
 					}).catchError(_ -> {});
 			}
 
-			if (spotubePort != null)
+			if (!force && spotubePort != null)
 				CallHttp.ping(spotubePort).then(_ -> connect(resolve)).catchError(_ -> checkPort());
 			else
 				checkPort();
