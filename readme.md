@@ -23,6 +23,10 @@ No properties needed
 
 Opens a basic control-panel with the album cover, play-pause, next, previous buttons
 
+## On long press
+
+Force to reconnect to Spotube
+
 ## Localizations
 
 The localizations are stored in `loc` directory. A JSON for each locale.
