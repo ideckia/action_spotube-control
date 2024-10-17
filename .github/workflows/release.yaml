@@ -35,6 +35,9 @@ jobs:
     - name: Compile project
       run: haxe deploy_all.hxml
 
+    - name: Install node.js dependencies
+      run: npm install
+
     - name: Create main directory to release
       run: |
         mkdir ${{ env.MAIN_CMD_NAME }}
